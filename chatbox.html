@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Box</title>
+    <style>
+        h3 {
+            text-align: center;
+        }
+        .result-chat{
+            width: 300px;
+            height: 300px;
+            border: 3px solid black;
+            margin-bottom: 1rem;
+            margin-left: 530px;
+            overflow: auto;
+        }
+        .input-button{
+            margin-left: 530px;
+        }
+        .input-chat{
+            width: 220px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Aplikasi Chat Sederhana</h3>
+        <main>
+            <div class="result-chat">
+            </div>
+            <div class="input-button">
+                <input type="text" class="input-chat">
+                <button class="btn-chat">Send</button>
+            </div>
+        </main>
+    </div>
+    <script>
+        let resultChat = document.querySelector(".result-chat");
+        const inputChat = document.querySelector(".input-chat");
+        const btnChat = document.querySelector(".btn-chat");
+
+        btnChat.addEventListener("click", function(){
+            resultChat.innerHTML = resultChat.innerHTML + "<br>" + inputChat.value;
+            inputChat.value = "";
+        })
+    </script>
+</body>
+</html>
